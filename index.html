@@ -12,9 +12,12 @@
         <h1>Welcome to the escape rooms</h1>
     </div>
     
-    <div id="gameSelection">
-        <button onClick="setRoom1Game()">Room 1</button>
-        <button onClick="setRoom2Game()">Room 2</button>
+    <div id="gameSelectionRoom1">
+        <button onClick="escapeRoom1()">Room 1</button>
+   </div>
+   
+   <div id="gameSelectionRoom2">
+        <button onClick="escapeRoom2()">Room 2</button>
    </div>
    
     <div id="gameLives">
@@ -30,9 +33,17 @@
         <button class="button" data-btnNum="btnNum6">6</button>
     </div>
     
+    <br />
 
-    <div id="room1Game">This is room 1</div>
-    <div id="room2Game">This is room 2</div>
+    <div id="gameRoom1">This is room 1: sequence - 3, 2, 4, 1, 6, 5</div>
+    <div id="gameRoom2">This is room 2: sequence - 4, 1, 3, 5, 2, 6</div>
+    
+    <div id="escapedRoom1">You have escaped Room 1. Try Room 2.</div>
+    <div id="escapedRoom2">You have escaped Room 2. Try Room 1.</div>
+    
+    <div id="notEscaped">You have not escaped this room. Try again or choose a diferent room.</div>
+    
+    <div id="escapedBoth">Congratulations you have escaped both rooms.</div>
     
 
 <!-- Jquery JS
