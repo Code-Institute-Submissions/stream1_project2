@@ -1,8 +1,6 @@
 let lives;
 let livesbox = document.getElementById("lives");
 
-// let answerbox = document.getElementById("gameButtons");
-
 let currentRoom;
 
 let rightAnswerArray = [];
