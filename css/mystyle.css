@@ -1,0 +1,13 @@
+
+
+
+.gameRooms {
+    position: relative;
+    background-color: green;
+    height: 500px;
+    width: 100%;
+}
+
+.gameButtons {
+    position: absolute;
+}

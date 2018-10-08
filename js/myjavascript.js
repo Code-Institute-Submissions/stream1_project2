@@ -62,7 +62,7 @@ $(".button").on("click", function() {
 function escapeRoom1() {
     currentRoom = "room1";
 
-    gameDisplay()
+    gameDisplay();
 
     rightAnswerArray = ["btnNum3", "btnNum2", "btnNum4", "btnNum1", "btnNum6", "btnNum5"];
     answerArray = [];
@@ -70,13 +70,13 @@ function escapeRoom1() {
     lives = 3;
     livesbox.textContent = lives;
 
-    gameContentRoom1()
+    gameContentRoom1();
 }
 
 function escapeRoom2() {
     currentRoom = "room2";
 
-    gameDisplay()
+    gameDisplay();
 
     rightAnswerArray = ["btnNum4", "btnNum1", "btnNum3", "btnNum5", "btnNum2", "btnNum6"];
     answerArray = [];
@@ -84,13 +84,13 @@ function escapeRoom2() {
     lives = 3;
     livesbox.textContent = lives;
 
-    gameContentRoom2()
+    gameContentRoom2();
 }
 
 function escapeRoom3() {
     currentRoom = "room3";
 
-    gameDisplay()
+    gameDisplay();
 
     rightAnswerArray = ["btnNum2", "btnNum6", "btnNum1", "btnNum4", "btnNum3", "btnNum5"];
     answerArray = [];
@@ -98,7 +98,7 @@ function escapeRoom3() {
     lives = 3;
     livesbox.textContent = lives;
 
-    gameContentRoom3()
+    gameContentRoom3();
 }
 
 function gameStart() {
@@ -112,23 +112,23 @@ function gameStart() {
     document.getElementById("gameRoom2").style.display = "none";
     document.getElementById("gameRoom3").style.display = "none";
     document.getElementById("gameHints").style.display = "none";
-    document.getElementById("escapedRoom1").style.display = "none";
-    document.getElementById("escapedRoom2").style.display = "none";
-    document.getElementById("escapedRoom3").style.display = "none";
-    document.getElementById("notEscaped").style.display = "none";
-    document.getElementById("escapedAll").style.display = "none";
+    // document.getElementById("escapedRoom1").style.display = "none";
+    // document.getElementById("escapedRoom2").style.display = "none";
+    // document.getElementById("escapedRoom3").style.display = "none";
+    // document.getElementById("notEscaped").style.display = "none";
+    // document.getElementById("escapedAll").style.display = "none";
 }
 
 function gameDisplay() {
     document.getElementById("gameIntro").style.display = "none";
     document.getElementById("gameLives").style.display = "block";
     document.getElementById("gameButtons").style.display = "block";
-    document.getElementById("escapedRoom1").style.display = "none";
-    document.getElementById("escapedRoom2").style.display = "none";
-    document.getElementById("escapedRoom3").style.display = "none";
+    // document.getElementById("escapedRoom1").style.display = "none";
+    // document.getElementById("escapedRoom2").style.display = "none";
+    // document.getElementById("escapedRoom3").style.display = "none";
     document.getElementById("gameHints").style.display = "block";
-    document.getElementById("notEscaped").style.display = "none";
-    document.getElementById("escapedAll").style.display = "none";
+    // document.getElementById("notEscaped").style.display = "none";
+    // document.getElementById("escapedAll").style.display = "none";
 }
 
 function gameContentRoom1() {
@@ -158,7 +158,7 @@ function gameContentRoom3() {
     document.getElementById("gameRoom3").style.display = "block";
 }
 
-function escapedRoom1() {
+// function escapedRoom1() {
     // document.getElementById("gameSelectionRoom1").style.display = "none";
     // document.getElementById("gameSelectionRoom2").style.display = "inline-block";
     // document.getElementById("gameSelectionRoom3").style.display = "inline-block";
@@ -174,9 +174,9 @@ function escapedRoom1() {
     // $("#modal__escaped-room1").modal({backdrop: 'static', keyboard: false});
     
     // checkComplete1 = true;
-}
+// }
 
-function escapedRoom2() {
+// function escapedRoom2() {
     // document.getElementById("gameSelectionRoom1").style.display = "inline-block";
     // document.getElementById("gameSelectionRoom2").style.display = "none";
     // document.getElementById("gameSelectionRoom3").style.display = "inline-block";
@@ -192,25 +192,25 @@ function escapedRoom2() {
     // $("#modal__escaped-room2").modal({backdrop: 'static', keyboard: false});
     
     // checkComplete2 = true;
-}
+// }
 
-function escapedRoom3() {
-    // document.getElementById("gameSelectionRoom1").style.display = "inline-block";
-    // document.getElementById("gameSelectionRoom2").style.display = "inline-block";
-    // document.getElementById("gameSelectionRoom3").style.display = "none";
-    // document.getElementById("gameLives").style.display = "none";
-    // document.getElementById("gameButtons").style.display = "none";
-    // document.getElementById("gameRoom1").style.display = "none";
-    // document.getElementById("gameRoom2").style.display = "none";
-    // document.getElementById("gameRoom3").style.display = "none";
-    // document.getElementById("escapedRoom3").style.display = "block";
-    // document.getElementById("notEscaped").style.display = "none";
-    // document.getElementById("escapedAll").style.display = "none";
+// function escapedRoom3() {
+//     document.getElementById("gameSelectionRoom1").style.display = "inline-block";
+//     document.getElementById("gameSelectionRoom2").style.display = "inline-block";
+//     document.getElementById("gameSelectionRoom3").style.display = "none";
+//     document.getElementById("gameLives").style.display = "none";
+//     document.getElementById("gameButtons").style.display = "none";
+//     document.getElementById("gameRoom1").style.display = "none";
+//     document.getElementById("gameRoom2").style.display = "none";
+//     document.getElementById("gameRoom3").style.display = "none";
+//     document.getElementById("escapedRoom3").style.display = "block";
+//     document.getElementById("notEscaped").style.display = "none";
+//     document.getElementById("escapedAll").style.display = "none";
     
-    // $("#modal__escaped-room3").modal({backdrop: 'static', keyboard: false});
+//     $("#modal__escaped-room3").modal({backdrop: 'static', keyboard: false});
     
-    // checkComplete3 = true;
-}
+//     checkComplete3 = true;
+// }
 
 // function notEscaped() {
 //     document.getElementById("gameSelectionRoom1").style.display = "inline-block";
@@ -228,20 +228,20 @@ function escapedRoom3() {
 //     document.getElementById("escapedAll").style.display = "none";
 // }
 
-function escapedAll() {
-    document.getElementById("gameSelectionRoom1").style.display = "none";
-    document.getElementById("gameSelectionRoom2").style.display = "none";
-    document.getElementById("gameSelectionRoom3").style.display = "none";
-    document.getElementById("gameLives").style.display = "none";
-    document.getElementById("gameButtons").style.display = "none";
-    document.getElementById("gameRoom1").style.display = "none";
-    document.getElementById("gameRoom2").style.display = "none";
-    document.getElementById("gameRoom3").style.display = "none";
-    document.getElementById("escapedRoom1").style.display = "none";
-    document.getElementById("escapedRoom2").style.display = "none";
-    document.getElementById("escapedRoom3").style.display = "none";
-    document.getElementById("notEscaped").style.display = "none";
-    document.getElementById("escapedAll").style.display = "block";
-}
+// function escapedAll() {
+//     document.getElementById("gameSelectionRoom1").style.display = "none";
+//     document.getElementById("gameSelectionRoom2").style.display = "none";
+//     document.getElementById("gameSelectionRoom3").style.display = "none";
+//     document.getElementById("gameLives").style.display = "none";
+//     document.getElementById("gameButtons").style.display = "none";
+//     document.getElementById("gameRoom1").style.display = "none";
+//     document.getElementById("gameRoom2").style.display = "none";
+//     document.getElementById("gameRoom3").style.display = "none";
+//     document.getElementById("escapedRoom1").style.display = "none";
+//     document.getElementById("escapedRoom2").style.display = "none";
+//     document.getElementById("escapedRoom3").style.display = "none";
+//     document.getElementById("notEscaped").style.display = "none";
+//     document.getElementById("escapedAll").style.display = "block";
+// }
 
 gameStart();
