@@ -1,22 +1,46 @@
-
-
+.responsive {
+    width: 100%;
+    height: auto;
+    
+}
 
 .gameBox__image {
     position: relative;
+    opacity: 0.8;
+    max-width: 1000px;
+    max-height: 563px;
 }
+
+.gameBox__image-clown {
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+    max-width: 200px;
+    max-height: 500px;
+}
+
+@media (max-width: 576px) {
+    .gameBox__image-clown {
+    /*position: absolute;*/
+    bottom: 10px;
+    left: 50px;
+    width: 75px;
+}
+}    
+
 
 .gameBox__text {
         position: absolute;
         color: white;
         top: 50px;
-        right: 50px;
+        right: 250px;
         width: 250px;
 }        
 
 @media (max-width: 576px) {
     .gameBox__text {
-        position: absolute;
-        color: white;
+        /*position: absolute;*/
+        /*color: white;*/
         top: 25px;
         right: 50px;
         width: 150px;
@@ -25,13 +49,7 @@
 
 
 
-.responsive {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    max-height: 563px;
-    
-}
+
 
 .button {
     width: 50px;
