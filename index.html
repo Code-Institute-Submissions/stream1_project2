@@ -12,29 +12,33 @@
 
     <!-- Bootstrap 4 CSS
 -------------------- -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"></link>
 
     <!-- Custom CSS
 -------------------- -->
-    <Link rel="stylesheet" href="css/mystyle.css" type="text/css" /></Link>
+    <Link rel="stylesheet" href="css/mystyle.css" type="text/css"></link>
 
 </head>
 
 <body>
-    <div class="container-fluid">
-        <section>
+    
+    <section>
+        <div class="container-fluid">
 
             <div class="row">
                 <div class="col-12 col-sm-12">
+                    
                     <div id="gameIntro">
                         <h1>Welcome to the escape rooms</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cumque hic mollitia earum iure distinctio velit in repudiandae natus quos.</p>
                     </div>
+                    
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-12 col-sm-12">
+                    
                     <div id="gameSelectionRoom1">
                         <button onClick="escapeRoom1()">Room 1</button>
                     </div>
@@ -46,89 +50,97 @@
                     <div id="gameSelectionRoom3">
                         <button onClick="escapeRoom3()">Room 3</button>
                     </div>
+                
                 </div>
             </div>
+        
+        </div>
+    </section>
 
-        </section>
-
-        <section>
-
+    <section>
+        <div class="container-fluid">
+            
             <div class="row">
 
                 <div class="col-12 col-sm-9">
 
-                    <div id="gameRooms">
+                    <!--<div id="gameRooms">-->
 
                         <div id="gameRoom1">
 
-                            <!--<div class="gameBox__image">-->
-                                <img class="gameBox__image responsive" src="media/image/cabin_interior.jpg" alt="Cabin interior" width="1000px" height="563px">
-                            <!--</div>-->
-                            <!--<div class="gameBox__text">-->
-                                <p class="gameBox__text">Welcome to room 1: sequence - 3, 2, 4, 1, 6, 5</p>
-                            <!--</div>-->
+                            <div class="gameBox__image">
+                                <img class="responsive" src="media/image/cabin_interior.jpg" alt="Cabin interior" width="1000px" height="563px">
+                            </div>
+                            <div class="gameBox__text">
+                                <p>Welcome to room 1: sequence - 3, 2, 4, 1, 6, 5</p>
+                            </div>
                 
                         </div>
 
 
                         <div id="gameRoom2">
-                            <div>
                                 <img src="media/image/factory_interior.jpg" alt="Factory interior" class="responsive" width="1000px" height="563px">
-                            </div>    
                         </div>
 
                         <div id="gameRoom3">
                             <!--<h4>This is room 3: sequence - 2, 6, 1, 4, 3, 5</h4>-->
                             <img src="media/image/house_interior.jpg" alt="House interior" class="responsive" width="1000px" height="563px">
                         </div>
-
-                    </div>
+                    
+                    <!--</div>    -->
 
                 </div>
 
                 <div class="col-12 col-sm-3">
+                    
                     <div id="gameHints">
                         <p>Hints</p>
                     </div>
+                    
                 </div>
 
             </div>
 
             <div class="row">
                 <div class="col-12 col-sm-12">
+                    
                     <div id="gameLives">
                         <p>Lives: <span id="lives">3</span></p>
                     </div>
+                    
                 </div>
             </div>
 
-            <div class="col-12 col-sm-9">
 
-                <div id="gameButtons">
-
+            <div class="row">
+            
+                <div class="col-12 col-sm-9">
+            
                     <div class="row">
-
-                        <div class="col-4 col-sm-2">
-                            <button class="button" data-btnNum="btnNum1" width="10px">1</button>
+                        <div class="col-12 col-sm-6">
+                            
+                            <div id="gameButton-group1">
+                                <button class="button" data-btnNum="btnNum1">1</button>
+                            
+                                <button class="button" data-btnNum="btnNum2">2</button>
+                            
+                                <button class="button" data-btnNum="btnNum3">3</button>
+                            </div>
+                        
                         </div>
-                        <div class="col-4 col-sm-2">
-                            <button class="button" data-btnNum="btnNum2">2</button>
+                        
+                        <div class="col-12 col-sm-6">
+                             
+                             <div id="gameButton-group2">
+                                <button class="button" data-btnNum="btnNum4">4</button>
+                            
+                                <button class="button" data-btnNum="btnNum5">5</button>
+                            
+                                <button class="button" data-btnNum="btnNum6">6</button>
+                            </div>
+    
                         </div>
-                        <div class="col-4 col-sm-2">
-                            <button class="button" data-btnNum="btnNum3">3</button>
-                        </div>
-
-                        <div class="col-4 col-sm-2">
-                            <button class="button" data-btnNum="btnNum4">4</button>
-                        </div>
-                        <div class="col-4 col-sm-2">
-                            <button class="button" data-btnNum="btnNum5">5</button>
-                        </div>
-                        <div class="col-4 col-sm-2">
-                            <button class="button" data-btnNum="btnNum6">6</button>
-                        </div>
-
-                    </div>
+                    </div>        
 
                 </div>
 
@@ -251,16 +263,18 @@
                 </div>
             </div>
 
-        </section>
-    </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container-fluid">
+            
             <div class="row">
                 <div class="col-12">
                     <div class="footer">This is the footer</div>
                 </div>
             </div>
+            
         </div>
     </footer>
 

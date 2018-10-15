@@ -107,7 +107,8 @@ function gameStart() {
     document.getElementById("gameSelectionRoom2").style.display = "inline-block";
     document.getElementById("gameSelectionRoom3").style.display = "inline-block";
     document.getElementById("gameLives").style.display = "none";
-    document.getElementById("gameButtons").style.display = "none";
+    document.getElementById("gameButton-group1").style.display = "none";
+    document.getElementById("gameButton-group2").style.display = "none";
     document.getElementById("gameRoom1").style.display = "none";
     document.getElementById("gameRoom2").style.display = "none";
     document.getElementById("gameRoom3").style.display = "none";
@@ -122,7 +123,8 @@ function gameStart() {
 function gameDisplay() {
     document.getElementById("gameIntro").style.display = "none";
     document.getElementById("gameLives").style.display = "block";
-    document.getElementById("gameButtons").style.display = "block";
+    document.getElementById("gameButton-group1").style.display = "block";
+    document.getElementById("gameButton-group2").style.display = "block";
     // document.getElementById("escapedRoom1").style.display = "none";
     // document.getElementById("escapedRoom2").style.display = "none";
     // document.getElementById("escapedRoom3").style.display = "none";
