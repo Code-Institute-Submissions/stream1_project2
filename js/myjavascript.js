@@ -1,6 +1,9 @@
 let lives;
 let livesbox = document.getElementById("lives");
 
+let status;
+let statusbox = document.getElementById("status");
+
 let currentRoom;
 
 let rightAnswerArray = [];
@@ -50,7 +53,14 @@ $(".button").on("click", function() {
 
     livesbox.textContent = lives;
 
-    if (lives == 0) {
+    if (lives == 2) {
+        document.getElementById("status").innerHTML=" You now have 2 lives";
+    }
+    else if (lives == 1) {
+        document.getElementById("status").innerHTML=" You now have 1 life";
+    }
+    else if (lives == 0) {
+        document.getElementById("status").innerHTML="";
         // console.log("You did not escape, you are stuck in here forever")
         // notEscaped();
         $("#modal__fail").modal({backdrop: 'static', keyboard: false});
@@ -69,6 +79,10 @@ function escapeRoom1() {
 
     lives = 3;
     livesbox.textContent = lives;
+    
+    status = "";
+    statusbox.textContent = status;
+    
 
     gameContentRoom1();
 }
@@ -107,12 +121,12 @@ function gameStart() {
     document.getElementById("gameSelectionRoom2").style.display = "inline-block";
     document.getElementById("gameSelectionRoom3").style.display = "inline-block";
     document.getElementById("gameLives").style.display = "none";
-    document.getElementById("gameButton-group1").style.display = "none";
-    document.getElementById("gameButton-group2").style.display = "none";
+    document.getElementById("gameButtons").style.display = "none";
     document.getElementById("gameRoom1").style.display = "none";
     document.getElementById("gameRoom2").style.display = "none";
     document.getElementById("gameRoom3").style.display = "none";
     document.getElementById("gameHints").style.display = "none";
+    document.getElementById("gameFooter").style.display = "none";
     // document.getElementById("escapedRoom1").style.display = "none";
     // document.getElementById("escapedRoom2").style.display = "none";
     // document.getElementById("escapedRoom3").style.display = "none";
@@ -122,13 +136,14 @@ function gameStart() {
 
 function gameDisplay() {
     document.getElementById("gameIntro").style.display = "none";
+    document.getElementById("gameSelections").style.display = "none";
     document.getElementById("gameLives").style.display = "block";
-    document.getElementById("gameButton-group1").style.display = "block";
-    document.getElementById("gameButton-group2").style.display = "block";
+    document.getElementById("gameButtons").style.display = "block";
     // document.getElementById("escapedRoom1").style.display = "none";
     // document.getElementById("escapedRoom2").style.display = "none";
     // document.getElementById("escapedRoom3").style.display = "none";
     document.getElementById("gameHints").style.display = "block";
+    document.getElementById("gameFooter").style.display = "block";
     // document.getElementById("notEscaped").style.display = "none";
     // document.getElementById("escapedAll").style.display = "none";
 }
