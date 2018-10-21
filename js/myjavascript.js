@@ -53,11 +53,14 @@ $(".button").on("click", function() {
 
     livesbox.textContent = lives;
 
-    if (lives == 2) {
-        document.getElementById("status").innerHTML=" You now have 2 lives";
+    if (lives == 3) {
+        document.getElementById("status").innerHTML="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, nam.";
+    }
+    else if (lives == 2) {
+        document.getElementById("status").innerHTML="You now have 2 lives.";
     }
     else if (lives == 1) {
-        document.getElementById("status").innerHTML=" You now have 1 life";
+        document.getElementById("status").innerHTML="You now have 1 life.";
     }
     else if (lives == 0) {
         document.getElementById("status").innerHTML="";
@@ -120,6 +123,7 @@ function gameStart() {
     document.getElementById("gameSelectionRoom1").style.display = "inline-block";
     document.getElementById("gameSelectionRoom2").style.display = "inline-block";
     document.getElementById("gameSelectionRoom3").style.display = "inline-block";
+    document.getElementById("gameBoxContent").style.display = "none";
     document.getElementById("gameLives").style.display = "none";
     document.getElementById("gameButtons").style.display = "none";
     document.getElementById("gameRoom1").style.display = "none";
@@ -139,6 +143,7 @@ function gameDisplay() {
     document.getElementById("gameSelections").style.display = "none";
     document.getElementById("gameLives").style.display = "block";
     document.getElementById("gameButtons").style.display = "block";
+    document.getElementById("gameBoxContent").style.display = "block";
     // document.getElementById("escapedRoom1").style.display = "none";
     // document.getElementById("escapedRoom2").style.display = "none";
     // document.getElementById("escapedRoom3").style.display = "none";
