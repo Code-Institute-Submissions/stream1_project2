@@ -14,6 +14,14 @@
 -------------------- -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"></link>
 
+<!-- Google Fonts
+-------------------- -->
+    <link href="https://fonts.googleapis.com/css?family=Nosifer|Roboto" rel="stylesheet">
+
+<!-- Hover CSS
+-------------------- -->    
+    <link rel="stylesheet" href="css/hover.css" type="text/css"></link>
+
     <!-- Custom CSS
 -------------------- -->
     <Link rel="stylesheet" href="css/mystyle.css" type="text/css"></link>
@@ -22,74 +30,81 @@
 
 <body>
     
-    <nav class="navbar">
-      <a class="navbar-brand" href="#">Navbar</a>
-    </nav>
-    
     <section>
         <div class="container-fluid">
             
             <div id="gameIntro">
                 <div class="row">
-                    <div class="col-12 col-sm-8">
+                    
+                    <div class="col-12 col-sm-12 col-md-8">
                     
                         <div class="gameIntro__text">
-                            <h1>Welcome to the escape rooms</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cumque hic mollitia earum iure distinctio velit in repudiandae natus quos.</p>
+                            <h1>DO YOU WANT TO PLAY A GAME?</h1>
+                            <h4>Hello! You don't know me, but I know you. I want to play a game. Here's what happens if you lose. YOU'RE MINE!.</h4> 
+                            <p>To regain your freedom you must escape all three rooms. Most people are so ungrateful to be free. Let's see if you still value your liberty. Each room has a button sequence and a riddle that gives you the correct sequence. If you get the sequence right, you escape. If you get the sequence wrong, you lose a life and have to start again. Take as long as you like. I don't mind.</p>
+                            <h6>Select a room below to start playing >>></h6>
                         </div>
                     
                     </div>
                     
-                    <div class="d-none d-sm-block col-sm-4">
+                    <div class="d-none d-sm-none d-md-block col-md-4">
 
                         <div class="gameIntro__image">
-                            <img class="responsive" src="media/image/clown_face.png" width="600" height="600">
+                            <img class="responsive hvr-buzz" src="media/image/clown_face.png" width="600" height="600">
                         </div>
                         
                     </div>                    
                 
                 </div> 
-                
             </div>
-
-            <!--<div class="row">-->
-            <!--    <div class="col-12 col-sm-12">-->
                     
-                    <div id="gameSelections" class="gameSelections--mod">
+            <div id="gameSelections">
+                <div class="row">
+                            
+                    <div class="col-12 col-sm-12 col-md-4">
                         
-                        <div class="row">
-                            
-                            <div class="col-12 col-sm-4">
-                                <div id="gameSelectionRoom1" class="room--mod">
-                                    <img onClick="escapeRoom1()" class="image responsive" src="media/image/cabin_interior.jpg" alt="Cabin interior" width="1000px" height="563px">
-                                    <div class="middle">
-                                        <button onClick="escapeRoom1()" class="room__text">Abandoned Cabin</button>
-                                    </div>
-                                </div>
+                        <div id="gameSelectionRoom1" class="room--mod">
+                            <div class="d-block d-sm-block d-md-none">
+                                <h6 class="room__text-mobile">ABANDONED CABIN</h6>
+                            </div> 
+                            <img onClick="escapeRoom1()" class="image responsive" src="media/image/cabin_exterior.jpg" alt="Cabin interior" width="1000px" height="563px">
+                            <div class="middle">
+                                <button onClick="escapeRoom1()" class="room__text-button">ABANDODNED CABIN</button>
                             </div>
-                            <div class="col-12 col-sm-4">
-                                <div id="gameSelectionRoom2" class="room--mod">
-                                    <img onClick="escapeRoom2()" class="image responsive" src="media/image/factory_interior.jpg" alt="Factory interior" width="1000px" height="563px">
-                                    <div class="middle">
-                                        <button onClick="escapeRoom2()" class="room__text">Abandoned Factory</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-4">
-                                <div id="gameSelectionRoom3" class="room--mod">
-                                    <img onClick="escapeRoom3()" class="image responsive" src="media/image/house_interior.jpg" alt="House interior" width="1000px" height="563px">
-                                    <div class="middle">
-                                        <button onClick="escapeRoom3()" class="room__text">Abandoned House</button>
-                                    </div>
-                                </div>
-                            </div>
-                            
                         </div>
-                        
+                    
                     </div>
-                
-            <!--    </div>-->
-            <!--</div>-->
+                            
+                    <div class="col-12 col-sm-12 col-md-4">
+                                
+                        <div id="gameSelectionRoom2" class="room--mod">
+                            <div class="d-block d-sm-block d-md-none">
+                                <h6 class="room__text-mobile">ABANDONED FACTORY</h6>
+                            </div> 
+                            <img onClick="escapeRoom2()" class="image responsive" src="media/image/factory_exterior.jpg" alt="Factory interior" width="1000px" height="563px">
+                            <div class="middle">
+                                <button onClick="escapeRoom2()" class="room__text-button">ABANDONED FACOTRY</button>
+                            </div>
+                        </div>
+                                
+                    </div>
+                            
+                    <div class="col-12 col-sm-12 col-md-4">
+                        
+                        <div id="gameSelectionRoom3" class="room--mod">
+                            <div class="d-block d-sm-block d-md-none">
+                                <h6 class="room__text-mobile">ABANDONED HOUSE</h6>
+                            </div> 
+                            <img onClick="escapeRoom3()" class="image responsive" src="media/image/house_exterior.jpg" alt="House interior" width="1000px" height="563px">
+                            <div class="middle">
+                                <button onClick="escapeRoom3()" class="room__text-button">ABANDONED HOUSE</button>
+                            </div>
+                        </div>
+                                
+                    </div>
+                            
+                </div>
+            </div>
         
         </div>
     </section>
@@ -103,7 +118,7 @@
                     <div id="gameLives"> 
                         <div class="gameLives--mod">
                             <div>
-                                <h4>Lives: <span id="lives">3</span></h4>
+                                <h3>Lives: <span id="lives">3</span></h3>
                             </div>    
                         </div>    
                     </div>
@@ -112,29 +127,29 @@
             </div>
             
             <div class="row">
-                <div class="col-12 col-sm-8">
+                <div class="col-12 col-sm-12 col-md-8">
                     
                     <div id="gameButtons" class="text-center">
                         
                         <div class="row">
-                            <div class="col-4 col-sm-2">
-                                    <button class="button" data-btnNum="btnNum1">1. DOOR</button>
+                            <div class="col-4 col-sm-4 col-md-2 gameButton--margin">
+                                    <button class="button gameButton--mod" data-btnNum="btnNum1">DOOR</button>
                             </div>
-                            <div class="col-4 col-sm-2">
-                                    <button class="button" data-btnNum="btnNum2">2. LAMP</button>
+                            <div class="col-4 col-sm-4 col-md-2 gameButton--margin">
+                                    <button class="button gameButton--mod" data-btnNum="btnNum2">LAMP</button>
                             </div>
-                            <div class="col-4 col-sm-2">
-                                    <button class="button" data-btnNum="btnNum3">3. COUCH</button>
+                            <div class="col-4 col-sm-4 col-md-2 gameButton--margin">
+                                    <button class="button gameButton--mod" data-btnNum="btnNum3">COUCH</button>
                             </div>
                             
-                            <div class="col-4 col-sm-2">
-                                    <button class="button" data-btnNum="btnNum4">4. RADIO</button>
+                            <div class="col-4 col-sm-4 col-md-2 gameButton--margin">
+                                    <button class="button gameButton--mod" data-btnNum="btnNum4">RADIO</button>
                             </div>
-                            <div class="col-4 col-sm-2">
-                                    <button class="button" data-btnNum="btnNum5">5. WINDOW</button>
+                            <div class="col-4 col-sm-4 col-md-2 gameButton--margin">
+                                    <button class=" button gameButton--mod" data-btnNum="btnNum5">WINDOW</button>
                             </div>
-                            <div class="col-4 col-sm-2">
-                                    <button class="button" data-btnNum="btnNum6">6. CHAIR</button>
+                            <div class="col-4 col-sm-4 col-md-2 gameButton--margin">
+                                    <button class="button gameButton--mod" data-btnNum="btnNum6">CHAIR</button>
                             </div>
                         </div>
                         
@@ -144,65 +159,54 @@
             </div>
             
             <div class="row">
-
-                <div class="col-12 col-sm-8">
-
-                    <!--<div id="gameRooms">-->
-
-                        <div id="gameRoom1">
-
-                            <div class="gameBox__image">
-                                <img class="responsive" src="media/image/cabin_interior.jpg" alt="Cabin interior" width="1000px" height="563px">
-                            </div>
                 
-                        </div>
-
-
-                        <div id="gameRoom2">
-                            
-                            <div class="gameBox__image">
-                                <img src="media/image/factory_interior.jpg" alt="Factory interior" class="responsive" width="1000px" height="563px">
-                            </div>    
-                            
-                        </div>
-
-                        <div id="gameRoom3">
-                            
-                            <div class="gameBox__image">
-                                <img src="media/image/house_interior.jpg" alt="House interior" class="responsive" width="1000px" height="563px">
-                            </div> 
-                        
-                        </div>
-                        
-                        <div id="gameBoxContent">
-                        
-                            <div class="gameBox__image-clown">
-                                <img class="responsive" src="media/image/clown.png" alt="Clown" width="214px" height="500px">
-                            </div>
-                            <div class="gameBox__text">
-                                <p>Welcome to the escape rooms.</p> 
-                                <p><span id="status"></span></p>
-                            </div>
-                            
-                        </div>    
+                <div class="col-12 col-sm-12 col-md-8">
                     
-                    <!--</div>    -->
+                    <div id="gameRoom1">
+                        <div class="gameBox__image">
+                            <img class="responsive" src="media/image/cabin_interior.jpg" alt="Cabin interior" width="1000px" height="563px">
+                        </div>
+                    </div>
+
+
+                    <div id="gameRoom2">
+                        <div class="gameBox__image">
+                            <img src="media/image/factory_interior.jpg" alt="Factory interior" class="responsive" width="1000px" height="563px">
+                        </div>    
+                    </div>
+
+                    <div id="gameRoom3">
+                        <div class="gameBox__image">
+                            <img src="media/image/house_interior.jpg" alt="House interior" class="responsive" width="1000px" height="563px">
+                        </div> 
+                    </div>
+                        
+                    <div id="gameBoxContent">
+                        <div class="gameBox__image-clown hvr-bounce-in">
+                            <img class="responsive" src="media/image/clown.png" alt="Clown" width="214px" height="500px">
+                        </div>
+                        <div class="gameBox__text">
+                            <h1>Let's Play!</h1>
+                            <br>
+                            <h4><span id="status"></span></h4>
+                        </div>
+                    </div>
 
                 </div>
 
-                <div class="col-12 col-sm-4">
+                <div class="col-12 col-sm-12 col-md-4">
                     
                     <div id="gameHints"> 
                         <div class="gameHints__text">
-                            <p>Hints</p>
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, nam.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, nam.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, nam.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, nam.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, nam.</li>
-                                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, nam.</li>
-                            </ul>
+                            <!--<p>Hints</p>-->
+                            <!--<ul>-->
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, nam.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, nam.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, nam.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, nam.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, nam.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, nam.</p>
+                            <!--</ul>-->
                         </div>    
                     </div>
                     
@@ -216,34 +220,20 @@
 
             </div>
 
-            <!--</div>-->
-            <!--<div id="escapedRoom1">You have escaped Room 1. Try Room 2 or 3.</div>-->
-            <!--<div id="escapedRoom2">You have escaped Room 2. Try Room 1 or 3.</div>-->
-            <!--<div id="escapedRoom3">You have escaped Room 2. Try Room 1 or 2.</div>-->
-
-            <!--<div id="notEscaped">You have not escaped this room. Try again or choose a diferent room.</div>-->
-
-            <!--<div id="escapedAll">Congratulations you have escaped all rooms.</div>-->
-
-
             <!-- Modal - Fail
                 -------------------- -->
             <div id="modal__fail" class="modal" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <!--<div class="modal-header">-->
-                        <!--<h5 class="modal-title">Modal title</h5>-->
-                        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>-->
-                        <!--</button>-->
-                        <!--</div>-->
-                        <div class="modal-body">
-                            <img class=" modal__clown-face responsive" src="media/image/clown_face.png" width="600" height="600">
-                            <p>You have failed to escape this room. Try again or choose a different room.</p>
+                        <div class="modal-body text-center">
+                            <img class="modal__clown-face responsive" src="media/image/clown_face.png" width="600" height="600">
+                            <h3>YOU'RE MINE!</h3> 
+                            <p>You have failed to escape this room. I'll let you try again or you can try a different room.</p>
                         </div>
                         <div class="modal-footer d-flex justify-content-center">
-                            <button type="button" onClick="escapeRoom1()" data-dismiss="modal">Abandoned Cabin</button>
-                            <button type="button" onClick="escapeRoom2()" data-dismiss="modal">Abandoned Factory</button>
-                            <button type="button" onClick="escapeRoom3()" data-dismiss="modal">Abandoned House</button>
+                            <button class="room__text-button" type="button" onClick="escapeRoom1()" data-dismiss="modal">ABANDONED CABIN</button>
+                            <button class="room__text-button" type="button" onClick="escapeRoom2()" data-dismiss="modal">ABANDONED FACTORY</button>
+                            <button class="room__text-button" type="button" onClick="escapeRoom3()" data-dismiss="modal">ABANDONED HOUSE</button>
                         </div>
                     </div>
                 </div>
@@ -254,18 +244,14 @@
             <div id="modal__escaped-room1" class="modal" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <!--<div class="modal-header">-->
-                        <!--<h5 class="modal-title">Modal title</h5>-->
-                        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>-->
-                        <!--</button>-->
-                        <!--</div>-->
-                        <div class="modal-body">
+                        <div class="modal-body text-center">
                             <img class=" modal__clown-face responsive" src="media/image/clown_face.png" width="600" height="600">
-                            <p>You have successfully escaped this room. Choose another room</p>
+                            <h3>Congratulations!</h3>
+                            <p>You have successfully escaped this room. Try another room</p>
                         </div>
                         <div class="modal-footer d-flex justify-content-center">
-                            <button type="button" onClick="escapeRoom2()" data-dismiss="modal">Abandoned Factory</button>
-                            <button type="button" onClick="escapeRoom3()" data-dismiss="modal">Abandoned House</button>
+                            <button class="room__text-button" type="button" onClick="escapeRoom2()" data-dismiss="modal">Abandoned Factory</button>
+                            <button class="room__text-button" type="button" onClick="escapeRoom3()" data-dismiss="modal">Abandoned House</button>
                         </div>
                     </div>
                 </div>
@@ -276,18 +262,14 @@
             <div id="modal__escaped-room2" class="modal" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <!--<div class="modal-header">-->
-                        <!--<h5 class="modal-title">Modal title</h5>-->
-                        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>-->
-                        <!--</button>-->
-                        <!--</div>-->
-                        <div class="modal-body">
-                            <img class=" modal__clown-face responsive" src="media/image/clown_face.png" width="600" height="600">
-                            <p>You have successfully escaped this room. Choose another room</p>
+                        <div class="modal-body text-center">
+                            <img class="modal__clown-face responsive" src="media/image/clown_face.png" width="600" height="600">
+                            <h3>Congratulations!</h3>
+                            <p>You have successfully escaped this room. Try another room</p>
                         </div>
                         <div class="modal-footer d-flex justify-content-center">
-                            <button type="button" onClick="escapeRoom1()" data-dismiss="modal">Abandoned Cabin</button>
-                            <button type="button" onClick="escapeRoom3()" data-dismiss="modal">Abandoned House</button>
+                            <button class="room__text-button" type="button" onClick="escapeRoom1()" data-dismiss="modal">Abandoned Cabin</button>
+                            <button class="room__text-button" type="button" onClick="escapeRoom3()" data-dismiss="modal">Abandoned House</button>
                         </div>
                     </div>
                 </div>
@@ -298,18 +280,14 @@
             <div id="modal__escaped-room3" class="modal" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <!--<div class="modal-header">-->
-                        <!--<h5 class="modal-title">Modal title</h5>-->
-                        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>-->
-                        <!--</button>-->
-                        <!--</div>-->
-                        <div class="modal-body">
+                        <div class="modal-body text-center">
                             <img class=" modal__clown-face responsive" src="media/image/clown_face.png" width="600" height="600">
-                            <p>You have successfully escaped this room. Choose another room</p>
+                            <h3>Congratulations!</h3>
+                            <p>You have successfully escaped this room. Try another room</p>
                         </div>
                         <div class="modal-footer d-flex justify-content-center">
-                            <button type="button" onClick="escapeRoom1()" data-dismiss="modal">Abandoned Cabin</button>
-                            <button type="button" onClick="escapeRoom2()" data-dismiss="modal">Abandoned Factory</button>
+                            <button class="room__text-button" type="button" onClick="escapeRoom1()" data-dismiss="modal">Abandoned Cabin</button>
+                            <button class="room__text-button" type="button" onClick="escapeRoom2()" data-dismiss="modal">Abandoned Factory</button>
                         </div>
                     </div>
                 </div>
@@ -319,17 +297,15 @@
                 -------------------- -->
             <div id="modal__escaped-all" class="modal" tabindex="-1" role="dialog">
                 <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Congratulations</h5>
-                            <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>-->
-                            <!--</button>-->
-                        </div>
+                    <div class="modal-content text-center">
                         <div class="modal-body">
-                            <p>You have successfully escaped all room and completed the game.</p>
+                            <img class=" modal__clown-face responsive" src="media/image/clown_face.png" width="600" height="600">
+                            <h3>Congratulations!</h3>
+                            <p> You are still alive.</p>
+                            <p>Most people are so ungrateful to be alive. But not you. Not anymore.</p>
                         </div>
-                        <div class="modal-footer d-flex justify-content-center">
-                            <p>Return to <a href="#" data-dismiss="modal">home</a>.</p>
+                        <div class="modal-footer">
+                            <p><a href="#" data-dismiss="modal">Play again</a></p>
                         </div>
                     </div>
                 </div>

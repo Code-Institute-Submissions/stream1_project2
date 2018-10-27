@@ -1,56 +1,100 @@
+
+    /*-- Base Styles
+-------------------- --*/
+h1, h2, h3 {
+    font-family: 'Nosifer', cursive;
+}
+
+h4, h5, h6, p {
+    font-family: 'Roboto', sans-serif;
+}
+
 body {
     background-image: url("../media/image/background.jpg");
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
     background-size: cover;
 }
 
-.navbar {
-    background-color: #91151a;
+.responsive {
+    width: 100%;
+    height: auto;
+    
 }
 
-.navbar-brand {
-    color: white;
-}
 
-.navbar-brand:hover {
-    color: grey;
-}
+    /*-- Game Intro
+-------------------- --*/
 
-.gameIntro__text {
+    /*-- Game Intro Text
+-------------------- --*/
+#gameIntro {
     min-height: 50vh;
 }
 
 .gameIntro__text h1 {
+    color: #c32230;
+    text-shadow: 2px 2px 2px #ffffff;
+    font-size: 4rem;
+    margin-top: 20px;
+}
+
+.gameIntro__text h4, p {
     color: white;
 }
 
-.gameIntro__text p {
-    color: white;
+.gameIntro__text h6 {
+    color: #c32230;
 }
 
+@media (max-width: 576px) {
+    .gameIntro__text h1 {
+        font-size: 1.8rem;
+    }
+    .gameIntro__text h4 {
+        font-size: 1rem;
+    }
+    .gameIntro__text p {
+        font-size: 0.8rem;
+    }
+}
+
+    /*-- Game Intro Image
+-------------------- --*/
 .gameIntro__image {
     margin-top: 50px;
+    margin-bottom: 10px;
     margin-left: 100px;
     max-width: 300px;
     max-height: 300px;
     
 }
 
-/*.gameSelections--mod {*/
-    /*min-height: 50vh;*/
-/*}*/
-
-.room--mod {
-    position: relative;
+    /*-- Game Intro Game Selections
+-------------------- --*/
+#gameSelections {
+    min-height: 50vh;
 }
 
-@media (max-width: 576px) {
+.room--mod {
+    /*position: relative;*/
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
     .room--mod {
     margin-top: 5px;
+    margin-bottom: 5px;
     }
 }
 
+.room__text-mobile {
+    color: #c32230;
+}
+
 .image {
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
     opacity: 1;
     display: block;
     transition: .5s ease;
@@ -69,32 +113,74 @@ body {
 }
 
 .room--mod:hover .image {
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 .room--mod:hover .middle {
     opacity: 1;
 }
 
-.room__text {
-    background-color: #91151a;
+.room__text-button {
+    background-color: #c32230;
+    border-color: #c32230;
+    color: white;
+    font-size: 16px;
+    padding: 8px 16px;
+}
+
+
+    /*-- Game Box Lives
+-------------------- --*/
+.gameLives--mod {
+    margin-top: 20px;
+    color: #c32230;
+    text-shadow: 2px 2px 2px #ffffff;
+}
+
+
+    /*-- Game Box Buttons
+-------------------- --*/
+.gameButton--margin {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.gameButton--mod {
+    width: 100%;
+    height: 100%;
+    background-color: #c32230;
+    border-color: #c32230;
     color: white;
     font-size: 16px;
     padding: 16px 32px;
 }
 
-.responsive {
-    width: 100%;
-    height: auto;
-    
+@media (max-width: 768px) {
+    .gameButton--mod {
+    font-size: 12px;
+    padding: 12px 20px;
+    }
 }
 
+@media (max-width: 576px) {
+    .gameButton--mod {
+    font-size: 12px;
+    padding: 10px 20px;
+    }
+}
+
+
+    /*-- Game Box
+-------------------- --*/
 .gameBox__image {
     position: relative;
     max-width: 1000px;
     max-height: 563px;
     margin-top: 5px;
     margin-bottom: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
 }
 
 .gameBox__image-clown {
@@ -109,7 +195,7 @@ body {
 .gameBox__text {
     position: absolute;
     color: white;
-    font-size: 2vw;
+    /*font-size: 2vw;*/
     top: 15%;
     left: 40%;
     width: 40%;
@@ -117,23 +203,32 @@ body {
 }
 
 @media (max-width: 576px) {
-    .gameBox__text {
-    font-size: 3vw;
+    .gameBox__text h1 {
+    font-size: 6vw;
+    }
+    .gameBox__text h4 {
+    font-size: 4vw;
     }
 }
 
+/*.gameHints__text {*/
+/*    margin-top: 10px;*/
+/*}*/
+
 .gameHints__text p {
+    font-size: 24px;
     color: white;
 }
 
-.gameHints__text ul li {
-    font-size: 1.25vw;
-    color: white;
+@media (max-width: 768px) {
+    .gameHints__text p {
+    font-size: 20px;
+    }
 }
 
 @media (max-width: 576px) {
-    .gameHints__text ul li {
-    font-size: 2.25vw;
+    .gameHints__text p {
+    font-size: 12px;
     }
 }
 
@@ -141,35 +236,21 @@ body {
     color: white;
 }
 
-.gameLives--mod {
-    margin-top: 10px;
-    color: white;
-}
 
-.gameLives__clown {
-    min-width: 50px;
-    min-height: 50px;
-}
 
-.button {
-    width: 100%;
-    height: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
+    /*-- Game Modals
+-------------------- --*/
 .modal-content {
     background-image: url("../media/image/background.jpg");
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
     background-size: cover;
 }
 
-.modal-body p {
+.modal-body h3, p {
     color: white;
 }
 
 .modal__clown-face {
-    margin-left: 80px;
     margin-bottom: 10px;
     max-width: 300px;
     max-height: 300px;
