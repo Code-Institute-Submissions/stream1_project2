@@ -97,7 +97,10 @@ function escapeRoom2() {
 
     lives = 3;
     livesbox.textContent = lives;
-
+    
+    status = "";
+    statusbox.textContent = status;
+    
     gameContentRoom2();
 }
 
@@ -111,7 +114,10 @@ function escapeRoom3() {
 
     lives = 3;
     livesbox.textContent = lives;
-
+    
+    status = "";
+    statusbox.textContent = status;
+    
     gameContentRoom3();
 }
 
