@@ -126,8 +126,9 @@ function gameStart() {
     document.getElementById("gameRoom1").style.display = "none";
     document.getElementById("gameRoom2").style.display = "none";
     document.getElementById("gameRoom3").style.display = "none";
-    document.getElementById("gameHints").style.display = "none";
-    document.getElementById("gameFooter").style.display = "none";
+    document.getElementById("gameHints1").style.display = "none";
+    document.getElementById("gameHints2").style.display = "none";
+    document.getElementById("gameHints3").style.display = "none";
 }
 
 function gameDisplay() {
@@ -136,8 +137,6 @@ function gameDisplay() {
     document.getElementById("gameLives").style.display = "block";
     document.getElementById("gameButtons").style.display = "block";
     document.getElementById("gameBoxContent").style.display = "block";
-    document.getElementById("gameHints").style.display = "block";
-    document.getElementById("gameFooter").style.display = "block";
 }
 
 function gameContentRoom1() {
@@ -145,8 +144,11 @@ function gameContentRoom1() {
     document.getElementById("gameSelectionRoom2").style.display = "none";
     document.getElementById("gameSelectionRoom3").style.display = "none";
     document.getElementById("gameRoom1").style.display = "block";
+    document.getElementById("gameHints1").style.display = "block";
     document.getElementById("gameRoom2").style.display = "none";
+    document.getElementById("gameHints2").style.display = "none";
     document.getElementById("gameRoom3").style.display = "none";
+    document.getElementById("gameHints3").style.display = "none";
 }
 
 function gameContentRoom2() {
@@ -154,8 +156,11 @@ function gameContentRoom2() {
     document.getElementById("gameSelectionRoom2").style.display = "none";
     document.getElementById("gameSelectionRoom3").style.display = "none";
     document.getElementById("gameRoom1").style.display = "none";
+    document.getElementById("gameHints1").style.display = "none";
     document.getElementById("gameRoom2").style.display = "block";
+    document.getElementById("gameHints2").style.display = "block";
     document.getElementById("gameRoom3").style.display = "none";
+    document.getElementById("gameHints3").style.display = "none";
 }
 
 function gameContentRoom3() {
@@ -163,8 +168,11 @@ function gameContentRoom3() {
     document.getElementById("gameSelectionRoom2").style.display = "none";
     document.getElementById("gameSelectionRoom3").style.display = "none";
     document.getElementById("gameRoom1").style.display = "none";
+    document.getElementById("gameHints1").style.display = "none";
     document.getElementById("gameRoom2").style.display = "none";
+    document.getElementById("gameHints2").style.display = "none";
     document.getElementById("gameRoom3").style.display = "block";
+    document.getElementById("gameHints3").style.display = "block";
 }
 
 gameStart();
