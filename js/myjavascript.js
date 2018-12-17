@@ -157,6 +157,10 @@ function escapeRoom3() {
     gameContentRoom3();
 }
 
+function playAgain() {
+    location.reload();
+}
+
 function gameStart() {
     document.getElementById("gameIntro").style.display = "block";
     document.getElementById("gameSelectionRoom1").style.display = "inline-block";
