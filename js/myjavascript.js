@@ -20,48 +20,84 @@ $(".button").on("click", function() {
 
     for (let i = 0; i < answerArray.length; i++) {
         if (answerArray[i] == rightAnswerArray[i]) {
+            document.getElementById("status").innerHTML="Good! But if you make a mistake it's back to square one.";
             if (answerArray[5] == rightAnswerArray[5]) {
                 if (currentRoom == "room1") {
-                    $("#modal__escaped-room1").modal({backdrop: 'static', keyboard: false});
                     checkComplete1 = true;
+                    if (checkComplete1 == true && checkComplete2 == true && checkComplete3 == true) {
+                        $("#modal__escaped-all").modal({backdrop: 'static', keyboard: false});
+                    }
+                    else if (checkComplete1 == true && checkComplete2 == true) {
+                        $("#modal__escaped-room1-2").modal({backdrop: 'static', keyboard: false});
+                    }
+                    else if (checkComplete1 == true && checkComplete3 ==true) {
+                        $("#modal__escaped-room1-3").modal({backdrop: 'static', keyboard: false});
+                    }
+                    else if (checkComplete1 == true) {
+                        $("#modal__escaped-room1").modal({backdrop: 'static', keyboard: false});
+                    }
                 }
                 else if (currentRoom == "room2") {
-                    $("#modal__escaped-room2").modal({backdrop: 'static', keyboard: false});
                     checkComplete2 = true;
+                    if (checkComplete2 == true && checkComplete1 == true && checkComplete3 == true) {
+                        $("#modal__escaped-all").modal({backdrop: 'static', keyboard: false});
+                    }
+                    else if (checkComplete2 == true && checkComplete1 == true) {
+                        $("#modal__escaped-room1-2").modal({backdrop: 'static', keyboard: false});
+                    }
+                    else if (checkComplete2 == true && checkComplete3 ==true) {
+                        $("#modal__escaped-room2-3").modal({backdrop: 'static', keyboard: false});
+                    }
+                    else if (checkComplete2 == true) {
+                        $("#modal__escaped-room2").modal({backdrop: 'static', keyboard: false});
+                    }
                 }
                 else if (currentRoom == "room3") {
-                    $("#modal__escaped-room3").modal({backdrop: 'static', keyboard: false});
                     checkComplete3 = true;
+                    if (checkComplete3 == true && checkComplete1 == true && checkComplete2 == true) {
+                        $("#modal__escaped-all").modal({backdrop: 'static', keyboard: false});
+                    }
+                    else if (checkComplete3 == true && checkComplete1 == true) {
+                        $("#modal__escaped-room1-3").modal({backdrop: 'static', keyboard: false});
+                    }
+                    else if (checkComplete3 == true && checkComplete2 ==true) {
+                        $("#modal__escaped-room2-3").modal({backdrop: 'static', keyboard: false});
+                    }
+                    else if (checkComplete3 == true) {
+                        $("#modal__escaped-room3").modal({backdrop: 'static', keyboard: false});
+                    }
                 }
             }
         }
         else {
+            document.getElementById("status").innerHTML="Oh dear! You lost a life and have to start again.";
             answerArray = [];
             lives--;
         }
     }
     
     
-    if (checkComplete1 == true && checkComplete2 == true && checkComplete3 == true) {
-        document.getElementById("modal__escaped-room1").style.display = "none";
-        document.getElementById("modal__escaped-room2").style.display = "none";
-        document.getElementById("modal__escaped-room3").style.display = "none";
-        $("#modal__escaped-all").modal({backdrop: 'static', keyboard: false});
-    }
+    // if (checkComplete1 == true && checkComplete2 == true && checkComplete3 == true) {
+    //     document.getElementById("modal__escaped-room1").style.display = "none";
+    //     document.getElementById("modal__escaped-room2").style.display = "none";
+    //     document.getElementById("modal__escaped-room3").style.display = "none";
+    //     $("#modal__escaped-all").modal({backdrop: 'static', keyboard: false});
+    // }
 
 
     livesbox.textContent = lives;
 
-    if (lives == 3) {
-        document.getElementById("status").innerHTML="Good! But if you make a mistake it's back to square one.";
-    }
-    else if (lives == 2) {
-        document.getElementById("status").innerHTML="Oh dear! You lost a life and have to start again.";
-    }
-    else if (lives == 1) {
-        document.getElementById("status").innerHTML="One more mistake and you're mine. Start again.";
-    }
-    else if (lives == 0) {
+    // if (lives == 3) {
+    //     document.getElementById("status").innerHTML="Good! But if you make a mistake it's back to square one.";
+    // }
+    // else if (lives == 2) {
+    //     document.getElementById("status").innerHTML="Oh dear! You lost a life and have to start again.";
+    // }
+    // else if (lives == 1) {
+    //     document.getElementById("status").innerHTML="One more mistake and you're mine. Start again.";
+    // }
+    // else 
+    if (lives == 0) {
         document.getElementById("status").innerHTML="";
         $("#modal__fail").modal({backdrop: 'static', keyboard: false});
     }

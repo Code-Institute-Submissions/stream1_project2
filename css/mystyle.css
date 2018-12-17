@@ -181,6 +181,7 @@ body {
     border-style: solid;
     border-width: 1px;
     border-color: white;
+    opacity: 0.6;
 }
 
 .gameBox__image-clown {
@@ -195,6 +196,7 @@ body {
 .gameBox__text {
     position: absolute;
     color: #c32230;
+    text-shadow: 2px 2px 2px #ffffff;
     top: 15%;
     left: 40%;
     width: 40%;
