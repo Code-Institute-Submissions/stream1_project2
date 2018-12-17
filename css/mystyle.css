@@ -1,12 +1,17 @@
 
     /*-- Base Styles
 -------------------- --*/
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Nosifer', cursive;
 }
 
-h4, h5, h6, p {
+h5, h6, p {
     font-family: 'Roboto', sans-serif;
+}
+
+section {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 body {
@@ -38,7 +43,7 @@ body {
     margin-top: 20px;
 }
 
-.gameIntro__text h4, p {
+.gameIntro__text h5, p {
     color: white;
 }
 
@@ -128,6 +133,12 @@ body {
     padding: 8px 16px;
 }
 
+@media (max-width: 576px) {
+    .room__text-button {
+        font-size: 14px;
+    }
+}
+
 
     /*-- Game Box Lives
 -------------------- --*/
@@ -199,7 +210,7 @@ body {
     text-shadow: 2px 2px 2px #ffffff;
     top: 15%;
     left: 40%;
-    width: 40%;
+    width: 50%;
     height: auto;
 }
 
@@ -247,7 +258,7 @@ body {
     background-size: cover;
 }
 
-.modal-body h3, p {
+.modal-body h4, p {
     color: white;
 }
 
