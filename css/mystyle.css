@@ -1,5 +1,5 @@
 
-    /*-- Base Styles
+/*-- Base Styles
 -------------------- --*/
 h1, h2, h3, h4 {
     font-family: 'Nosifer', cursive;
@@ -16,7 +16,6 @@ section {
 
 body {
     background-image: url("../media/image/background.jpg");
-    /*background-repeat: no-repeat;*/
     background-size: cover;
 }
 
@@ -27,11 +26,9 @@ body {
 }
 
 
-    /*-- Game Intro
+/*-- Game Intro Text
 -------------------- --*/
 
-    /*-- Game Intro Text
--------------------- --*/
 #gameIntro {
     min-height: 50vh;
 }
@@ -63,8 +60,10 @@ body {
     }
 }
 
-    /*-- Game Intro Image
+
+/*-- Game Intro Image
 -------------------- --*/
+
 .gameIntro__image {
     margin-top: 50px;
     margin-bottom: 10px;
@@ -74,14 +73,15 @@ body {
     
 }
 
-    /*-- Game Intro Game Selections
+
+/*-- Game Intro Game Selections
 -------------------- --*/
+
 #gameSelections {
     min-height: 50vh;
 }
 
 .room--mod {
-    /*position: relative;*/
     margin-top: 10px;
 }
 
@@ -140,8 +140,10 @@ body {
 }
 
 
-    /*-- Game Box Lives
+
+/*-- Game Box Lives
 -------------------- --*/
+
 .gameLives--mod {
     margin-top: 20px;
     color: #c32230;
@@ -149,8 +151,9 @@ body {
 }
 
 
-    /*-- Game Box Buttons
+/*-- Game Box Buttons
 -------------------- --*/
+
 .gameButton--margin {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -181,8 +184,9 @@ body {
 }
 
 
-    /*-- Game Box
+/*-- Game Box
 -------------------- --*/
+
 .gameBox__image {
     position: relative;
     max-width: 1000px;
@@ -203,7 +207,6 @@ body {
     height: auto;
 }
 
-
 .gameBox__text {
     position: absolute;
     color: #c32230;
@@ -222,10 +225,6 @@ body {
     font-size: 4vw;
     }
 }
-
-/*.gameHints__text {*/
-/*    margin-top: 10px;*/
-/*}*/
 
 .gameHints__text p {
     font-size: 24px;
@@ -250,11 +249,11 @@ body {
 
 
 
-    /*-- Game Modals
+/*-- Game Modals
 -------------------- --*/
+
 .modal-content {
     background-image: url("../media/image/background.jpg");
-    /*background-repeat: no-repeat;*/
     background-size: cover;
 }
 
@@ -267,5 +266,3 @@ body {
     max-width: 300px;
     max-height: 300px;
 }
-
-

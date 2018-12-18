@@ -75,28 +75,9 @@ $(".button").on("click", function() {
             lives--;
         }
     }
-    
-    
-    // if (checkComplete1 == true && checkComplete2 == true && checkComplete3 == true) {
-    //     document.getElementById("modal__escaped-room1").style.display = "none";
-    //     document.getElementById("modal__escaped-room2").style.display = "none";
-    //     document.getElementById("modal__escaped-room3").style.display = "none";
-    //     $("#modal__escaped-all").modal({backdrop: 'static', keyboard: false});
-    // }
-
 
     livesbox.textContent = lives;
-
-    // if (lives == 3) {
-    //     document.getElementById("status").innerHTML="Good! But if you make a mistake it's back to square one.";
-    // }
-    // else if (lives == 2) {
-    //     document.getElementById("status").innerHTML="Oh dear! You lost a life and have to start again.";
-    // }
-    // else if (lives == 1) {
-    //     document.getElementById("status").innerHTML="One more mistake and you're mine. Start again.";
-    // }
-    // else 
+    
     if (lives == 0) {
         document.getElementById("status").innerHTML="";
         $("#modal__fail").modal({backdrop: 'static', keyboard: false});
@@ -118,10 +99,10 @@ function escapeRoom1() {
     
     status = "";
     statusbox.textContent = status;
-    
 
     gameContentRoom1();
 }
+
 
 function escapeRoom2() {
     currentRoom = "room2";
@@ -140,6 +121,7 @@ function escapeRoom2() {
     gameContentRoom2();
 }
 
+
 function escapeRoom3() {
     currentRoom = "room3";
 
@@ -157,9 +139,11 @@ function escapeRoom3() {
     gameContentRoom3();
 }
 
+
 function playAgain() {
     location.reload();
 }
+
 
 function gameStart() {
     document.getElementById("gameIntro").style.display = "block";
@@ -177,6 +161,7 @@ function gameStart() {
     document.getElementById("gameHints3").style.display = "none";
 }
 
+
 function gameDisplay() {
     document.getElementById("gameIntro").style.display = "none";
     document.getElementById("gameSelections").style.display = "none";
@@ -184,6 +169,7 @@ function gameDisplay() {
     document.getElementById("gameButtons").style.display = "block";
     document.getElementById("gameBoxContent").style.display = "block";
 }
+
 
 function gameContentRoom1() {
     document.getElementById("gameSelectionRoom1").style.display = "none";
@@ -197,6 +183,7 @@ function gameContentRoom1() {
     document.getElementById("gameHints3").style.display = "none";
 }
 
+
 function gameContentRoom2() {
     document.getElementById("gameSelectionRoom1").style.display = "none";
     document.getElementById("gameSelectionRoom2").style.display = "none";
@@ -209,6 +196,7 @@ function gameContentRoom2() {
     document.getElementById("gameHints3").style.display = "none";
 }
 
+
 function gameContentRoom3() {
     document.getElementById("gameSelectionRoom1").style.display = "none";
     document.getElementById("gameSelectionRoom2").style.display = "none";
@@ -220,5 +208,6 @@ function gameContentRoom3() {
     document.getElementById("gameRoom3").style.display = "block";
     document.getElementById("gameHints3").style.display = "block";
 }
+
 
 gameStart();
