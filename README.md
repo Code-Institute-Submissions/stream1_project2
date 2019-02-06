@@ -15,7 +15,7 @@ The landing page includes an introduction, instructions on how to play the game 
 
 The three game pages are identical in layout and differ only in content and logic. The clues on the right hand side (on desktop, below on mobile and tablet) provide the correct sequence if the user can figure it out. **Important to note,** these clues are not sequential, the user needs to read all clues before they decide on the correct sequence. Once the user starts to click the buttons, the "Clown" will provide narration on whether or not they have keyed in the correct sequence. If the user makes a mistake, they lose a life and have to start the sequence again. If the user loses all 3 lives, they are informed via a modal that they have failed and offered the opportunity to try again, or choose another game area. If they are key in the correct sequence, they are congratulated, again via a modal, and offered the opportunity to play the remaining game areas. Once the user has successfully completed all game areas they are informed as such and offered the opportunity to reset the game.
 
-***For convenience, I have included the correct sequences at the bottom of this READEME document.***
+***For convenience, I have included the correct sequences at the bottom of this README document.***
 
 Again, the game pages are fully responsive and content and layout has been appropriately accommodated  for mobile, tablet and desktop.
 
